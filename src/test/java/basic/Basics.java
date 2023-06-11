@@ -1,32 +1,53 @@
 
 package basic;
 
+import files.PayLoad;
+import files.ReusableMethods;
 import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
+import org.testng.Assert;
+
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.Matchers.*;
 
 public class Basics {
 
     public static void main(String[] args) {
+
         RestAssured.baseURI = "https://rahulshettyacademy.com";
-        given().log().all().queryParam("key", "qaclick123").header("Content-Type", "application/json")
-                .body("{\n" +
-                        "  \"location\": {\n" +
-                        "    \"lat\": 29.9891544,\n" +
-                        "    \"lng\": 31.3063091\n" +
-                        "  },\n" +
-                        "  \"accuracy\": 50,\n" +
-                        "  \"name\": \"Hamed Home\",\n" +
-                        "  \"phone_number\": \"(+2)01090074666\",\n" +
-                        "  \"address\": \"113, Refaat Hassan St, Hadaba Wosta, Mukkatam\",\n" +
-                        "  \"types\": [\n" +
-                        "    \"Home\",\n" +
-                        "    \"Work\"\n" +
-                        "  ],\n" +
-                        "  \"website\": \"https://rahulshettyacademy.com\",\n" +
-                        "  \"language\": \"Arabic\"\n" +
-                        "}\n")
+
+        String response = given().log().all().queryParam("key", "qaclick123")
+                .header("Content-Type", "application/json")
+                .body(PayLoad.addPlace())
                 .when().post("maps/api/place/add/json")
-                .then().log().all().assertThat().statusCode(200);
+                .then().assertThat().statusCode(200)
+                .header("Server","Apache/2.4.41 (Ubuntu)")
+                .body("scope",equalTo("APP")).extract().response().asString();
+        System.out.println(response);
+        JsonPath js = ReusableMethods.rawToJson(response);
+        String placeId = js.getString("place_id");
+        System.out.println("place_id = "+ placeId);
+
+        String newAddress = "36, El Etihad St";
+        given().queryParam("key","qaclick123")
+                .header("Content-Type", "application/json")
+                .body("{\n" +
+                        "    \"place_id\" : \""+ placeId + "\",\n" +
+                        "    \"address\": \"" + newAddress + "\",\n" +
+                        "    \"key\": \"qaclick123\"\n" +
+                        "}\n")
+                .when().put("maps/api/place/update/json")
+                .then().assertThat().statusCode(200)
+                .body("msg", equalTo("Address successfully updated"));
+
+        String getPlaceResponse = given().queryParam("key","qaclick123").queryParam("place_id",placeId)
+                .when().get("maps/api/place/get/json")
+                .then().assertThat().statusCode(200).extract().response().asString();
+        JsonPath getJs = ReusableMethods.rawToJson(getPlaceResponse);
+        String updatedAddress = getJs.getString("address");
+        Assert.assertEquals(updatedAddress,newAddress);
+        System.out.println("UpdatedAddress is: "+updatedAddress);
 
     }
+
 }
