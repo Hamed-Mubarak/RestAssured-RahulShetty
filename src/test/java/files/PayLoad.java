@@ -21,4 +21,33 @@ public class PayLoad {
                 "  \"language\": \"Arabic\"\n" +
                 "}\n";
     }
+
+    public static String coursePrice()
+    {
+        return "{\n" +
+                "  \"dashboard\" : {\n" +
+                "    \"purchaseAmount\": 910,\n" +
+                "    \"website\" : \"www.google.com\"\n" +
+                "  },\n" +
+                "\n" +
+                "  \"courses\" :[\n" +
+                "    {\n" +
+                "      \"title\" : \"Selenium Java\",\n" +
+                "      \"price\" : 50,\n" +
+                "      \"copies\": 6\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"title\" : \"Cypress\",\n" +
+                "      \"price\" : 40,\n" +
+                "      \"copies\": 4\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"title\" : \"Shaft\",\n" +
+                "      \"price\" : 45,\n" +
+                "      \"copies\": 10\n" +
+                "    }\n" +
+                "     \n" +
+                "  ]\n" +
+                "}";
+    }
 }
