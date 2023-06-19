@@ -17,6 +17,7 @@ import static org.hamcrest.Matchers.*;
 
 public class Basics {
 
+    // comment push
     public static void main(String[] args) {
 
         RestAssured.baseURI = "https://rahulshettyacademy.com";
