@@ -26,7 +26,7 @@ public class Basics {
                 .body(PayLoad.addPlace())
                 .when().post("maps/api/place/add/json")
                 .then().assertThat().statusCode(200)
-                .header("Server","Apache/2.4.41 (Ubuntu)")
+                .header("Server","Apache/2.4.52 (Ubuntu)")
                 .body("scope",equalTo("APP")).extract().response().asString();
         System.out.println(response);
         JsonPath js = ReusableMethods.rawToJson(response);
