@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2cffdb6d-a681-48b3-a316-5f5f650445a3" name="Changes" comment="" />
+    <list default="true" id="2cffdb6d-a681-48b3-a316-5f5f650445a3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/payloadStrategies/Parameterization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/payloadStrategies/ReadFromFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/basic/Basics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basic/Basics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/basic/ComplexJsonParse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basic/ComplexJsonParse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/files/PayLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/files/PayLoad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/payloadStrategies/DynamicJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/payloadStrategies/DynamicJson.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,5 +111,16 @@
       <updated>1686423702223</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

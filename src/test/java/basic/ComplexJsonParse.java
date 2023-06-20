@@ -19,7 +19,7 @@ public class ComplexJsonParse {
 
         String firstCourseTitle = js.getString("courses[0].title");
         Assert.assertEquals(firstCourseTitle, "Selenium Java");
-        System.out.println("firstCourseAmount is: " + firstCourseTitle);
+        System.out.println("firstCourseTitle is: " + firstCourseTitle);
 
         for (int i = 0; i < count; i++)
         {

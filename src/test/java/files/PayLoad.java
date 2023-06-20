@@ -2,8 +2,7 @@ package files;
 
 public class PayLoad {
 
-    public static String addPlace()
-    {
+    public static String addPlace() {
         return "{\n" +
                 "  \"location\": {\n" +
                 "    \"lat\": 29.9891544,\n" +
@@ -21,9 +20,7 @@ public class PayLoad {
                 "  \"language\": \"Arabic\"\n" +
                 "}\n";
     }
-
-    public static String coursePrice()
-    {
+    public static String coursePrice() {
         return "{\n" +
                 "  \"dashboard\" : {\n" +
                 "    \"purchaseAmount\": 910,\n" +
@@ -50,7 +47,6 @@ public class PayLoad {
                 "  ]\n" +
                 "}";
     }
-
     public static String addBook(String isbn, String isle){
         String payload= "{\n" +
                 "    \"name\":\"Learn Appium Automation with java\",\n" +
