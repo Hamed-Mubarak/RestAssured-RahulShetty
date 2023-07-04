@@ -31,7 +31,8 @@ public class Jira {
 
         String addCommentResponse =
                 given().pathParam("key", "10101").log().all()
-                        .header("Content-Type","application/json").body("{\r\n" +
+                        .header("Content-Type","application/json")
+                        .body("{\r\n" +
                         "    \"body\": \""+expectedMessage+"\",\r\n" +
                         "    \"visibility\": {\r\n" +
                         "        \"type\": \"role\",\r\n" +

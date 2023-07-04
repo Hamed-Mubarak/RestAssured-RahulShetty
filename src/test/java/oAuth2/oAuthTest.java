@@ -3,6 +3,7 @@ package oAuth2;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.restassured.RestAssured;
+import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -46,13 +47,12 @@ public class oAuthTest {
                 "&prompt=consent#\n";
 */
 
-        String url= "\n" +
-                "        https://rahulshettyacademy.com/getCourse.php?state=verifyfjdss\n" +
-                "        &code=4%2FvAHBQUZU6o4WJ719NrGBzSELBFVBI9XbxvOtYpmYpeV47bFVExkaxWaF_XR14PHtTZf7ILSEeamywJKwo_BYs9M\n" +
-                "        &scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid\n" +
-                "        &authuser=0\n" +
-                "        &session_state=0c32992f0d47e93d273922018ade42d1072b9d1f..a35c\n" +
-                "        &prompt=none#";
+        String url= "https://rahulshettyacademy.com/getCourse.php" +
+                "?code=4%2FvAHBm2GRDwCkyjMalxQUWKWUFuHnWE2wQNW-tSM0PELkOnp49xG3HmgZwaCHbP7q_Ukve8r3IOq0VELMJLvXqEc" +
+                "&scope=email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid" +
+                "&authuser=1" +
+                "&hd=rabbitmart.com" +
+                "&prompt=consent";
         String partialCode=url.split("code=")[1];
         String code=partialCode.split("&scope")[0];
         System.out.println("Authorization code is: " + code);
@@ -64,8 +64,6 @@ public class oAuthTest {
                 .queryParams("client_secret","erZOWM9g3UtwNRj340YYaK_W")
                 .queryParams("redirect_uri","https://rahulshettyacademy.com/getCourse.php")
                 .queryParams("grant_type","authorization_code")
-                .queryParams("session_state","f4a89d1f7011eb34eef8cf02ce4353316d9744b..7eb8")
-                .queryParams("scope","email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email")
         .when().log().all().post("https://www.googleapis.com/oauth2/v4/token").asString();
         JsonPath js = new JsonPath(accessTokenResponse);
         String accessToken = js.getString("access_token");
@@ -77,6 +75,17 @@ public class oAuthTest {
                 .contentType("application/json")
         .when().log().all().get("https://rahulshettyacademy.com/getCourse.php").asString();
         System.out.println(response);
+ /*
+        When the API is passed i have to tell the IDE that the default response received is JSON
+        and convert it to Java Object POJO class
+        GetCourse getCourse=
+        given().queryParam("access_token",accessToken).expect().defaultParser(Parser.JSON)
+
+        .when().get("https://rahulshettyacademy.com/getCourse.php").as(GetCourse.class);
+        System.out.println(response);
+
+  */
+
     }
 }
 

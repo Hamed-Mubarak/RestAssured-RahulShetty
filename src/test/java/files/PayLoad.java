@@ -47,6 +47,48 @@ public class PayLoad {
                 "  ]\n" +
                 "}";
     }
+    public static String getCourses(){
+        return "{\n" +
+                "  \"isntructor\":\"RahulShetty\",\n" +
+                "  \"url\":\"rahulshettyacademy.com\",\n" +
+                "  \"services\":\"projectSupport\",\n" +
+                "  \"expertise\":\"Automation\",\n" +
+                "  \"courses\": {\n" +
+                "    \"webAutomation\":[\n" +
+                "      {\n" +
+                "        \"courseTitle\": \"Selenium Webdriver Java\",\n" +
+                "        \"price\": \"50\"\n" +
+                "      },\n" +
+                "      {\n" +
+                "        \"courseTitle\":\"Cypress\",\n" +
+                "        \"price\":\"40\"\n" +
+                "      },\n" +
+                "      {\n" +
+                "        \"courseTitle\" : \"Protractor\",\n" +
+                "        \"price\":\"50\"\n" +
+                "      }\n" +
+                "    ],\n" +
+                "    \"api\": [\n" +
+                "      {\n" +
+                "        \"courseTitle\": \"Rest Assured Automation using Java\",\n" +
+                "        \"price\": \"50\"\n" +
+                "      },\n" +
+                "      {\n" +
+                "        \"courseTitle\":\"SoapUI Webservices testing\",\n" +
+                "        \"price\":\"40\"\n" +
+                "      }\n" +
+                "      \n" +
+                "    ],\n" +
+                "    \"mobile\": [\n" +
+                "      {\n" +
+                "        \"courseTitle\": \"Appium-Mobile Automation using Java\",\n" +
+                "        \"price\": \"50\"\n" +
+                "      }\n" +
+                "    ]\n" +
+                "  },\n" +
+                "  \"linkedIn\":\"https//www.linkedin.com/in.rahul-shetty-trainer/\"\n" +
+                "}";
+    }
     public static String addBook(String isbn, String isle){
         String payload= "{\n" +
                 "    \"name\":\"Learn Appium Automation with java\",\n" +
