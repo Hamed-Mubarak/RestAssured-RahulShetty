@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cffdb6d-a681-48b3-a316-5f5f650445a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/Api.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/Courses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/GetCourse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/Mobile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/WebAutomation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/serialization/AddPlaceBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/serialization/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/serialization/SerializeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/basic/Jira.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basic/Jira.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/files/PayLoad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/files/PayLoad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/oAuth2/SeleniumTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/oAuth2/oAuthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/oAuth2/oAuthTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,33 +45,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.runner&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.oAuthTest">
-    <configuration name="Basics" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="basic.Basics" />
-      <module name="RestAssured_Java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="basic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ComplexJsonParse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="basic.ComplexJsonParse" />
-      <module name="RestAssured_Java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="basic.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.SerializeTest.serializationTest">
     <configuration name="SeleniumTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="oAuth2.SeleniumTest" />
       <module name="RestAssured_Java" />
@@ -101,6 +68,24 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeSerializeTest.deSerializationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssured_Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pojo.serialization.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pojo.serialization" />
+      <option name="MAIN_CLASS_NAME" value="pojo.serialization.DeSerializeTest" />
+      <option name="METHOD_NAME" value="deSerializationTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -135,20 +120,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SerializeTest.serializationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssured_Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pojo.serialization.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pojo.serialization" />
+      <option name="MAIN_CLASS_NAME" value="pojo.serialization.SerializeTest" />
+      <option name="METHOD_NAME" value="serializationTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.Basics" />
-      <item itemvalue="Application.ComplexJsonParse" />
       <item itemvalue="Application.oAuthTest" />
       <item itemvalue="Application.SeleniumTest" />
+      <item itemvalue="TestNG.DeSerializeTest.deSerializationTest" />
+      <item itemvalue="TestNG.SerializeTest.serializationTest" />
       <item itemvalue="TestNG.SeleniumTest.testSelenium" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.SerializeTest.serializationTest" />
+        <item itemvalue="TestNG.DeSerializeTest.deSerializationTest" />
         <item itemvalue="Application.oAuthTest" />
         <item itemvalue="TestNG.SeleniumTest.testSelenium" />
         <item itemvalue="Application.SeleniumTest" />
-        <item itemvalue="Application.Basics" />
-        <item itemvalue="Application.ComplexJsonParse" />
       </list>
     </recent_temporary>
   </component>
