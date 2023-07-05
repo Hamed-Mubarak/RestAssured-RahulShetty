@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cffdb6d-a681-48b3-a316-5f5f650445a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/serialization/AddPlaceBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/serialization/Location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/serialization/SerializeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/reqSpecBuilder/ReqSpecBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,20 +43,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.runner&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.SerializeTest.serializationTest">
-    <configuration name="SeleniumTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="oAuth2.SeleniumTest" />
-      <module name="RestAssured_Java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="oAuth2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.ReqSpecBuilder.requestSpecBuilder">
     <configuration name="oAuthTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="oAuth2.oAuthTest" />
       <module name="RestAssured_Java" />
@@ -83,6 +68,24 @@
       <option name="PACKAGE_NAME" value="pojo.serialization" />
       <option name="MAIN_CLASS_NAME" value="pojo.serialization.DeSerializeTest" />
       <option name="METHOD_NAME" value="deSerializationTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReqSpecBuilder.requestSpecBuilder" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="RestAssured_Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="reqSpecBuilder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="reqSpecBuilder" />
+      <option name="MAIN_CLASS_NAME" value="reqSpecBuilder.ReqSpecBuilder" />
+      <option name="METHOD_NAME" value="requestSpecBuilder" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -140,18 +143,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.oAuthTest" />
-      <item itemvalue="Application.SeleniumTest" />
+      <item itemvalue="TestNG.ReqSpecBuilder.requestSpecBuilder" />
       <item itemvalue="TestNG.DeSerializeTest.deSerializationTest" />
       <item itemvalue="TestNG.SerializeTest.serializationTest" />
       <item itemvalue="TestNG.SeleniumTest.testSelenium" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ReqSpecBuilder.requestSpecBuilder" />
         <item itemvalue="TestNG.SerializeTest.serializationTest" />
         <item itemvalue="TestNG.DeSerializeTest.deSerializationTest" />
         <item itemvalue="Application.oAuthTest" />
         <item itemvalue="TestNG.SeleniumTest.testSelenium" />
-        <item itemvalue="Application.SeleniumTest" />
       </list>
     </recent_temporary>
   </component>
