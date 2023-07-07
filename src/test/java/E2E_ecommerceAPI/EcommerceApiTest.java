@@ -86,18 +86,12 @@ public class EcommerceApiTest {
         Response createOrderBaseResp = createOrderReq
                 .when().post("/api/ecom/order/create-order")
                 .then().extract().response();
-        String orderStringResp = createOrderBaseResp.asString();
-        JsonPath js = new JsonPath(orderStringResp);
-        String orderId =js.getString("orders[0]");
-        System.out.println(orderId);
-        /*
         CreateOrderResponse createOrderBojoResp = createOrderBaseResp.as(CreateOrderResponse.class);
         for(int i=0; i<createOrderBojoResp.getOrders().size();i++)
         {
-            System.out.println("Order " + (i+1) + ":/t" +createOrderBojoResp.getOrders().indexOf(i+1));
-            System.out.println("ProductOrder " + (i+1) + ":/t" +createOrderBojoResp.getProductOrderId().indexOf(i+1) );
+            System.out.println("Order #" + (i+1) + ": " +createOrderBojoResp.getOrders().get(i));
+            System.out.println("ProductOrder #" + (i+1) + ": " +createOrderBojoResp.getProductOrderId().get(i) );
         }
-        */
 
         //Get Order Details
         RequestSpecification getOrderBaseReq = new RequestSpecBuilder()
@@ -106,7 +100,7 @@ public class EcommerceApiTest {
                 .setContentType(ContentType.JSON)
                 .build();
         RequestSpecification getOrderReq = given().spec(getOrderBaseReq)
-                .queryParam("id",orderId);
+                .queryParam("id",createOrderBojoResp.getOrders().get(0));
         Response getOrderBaseResp= getOrderReq
                 .when().get("/api/ecom/order/get-orders-details")
                 .then().extract().response();
@@ -121,7 +115,7 @@ public class EcommerceApiTest {
                 .setContentType(ContentType.JSON)
                 .build();
         RequestSpecification deleteOrderReq = given().spec(deleteOrderBaseReq)
-                .pathParam("orderId",orderId);
+                .pathParam("orderId",createOrderBojoResp.getOrders().get(0));
 
         Response deleteOrderBaseResp = deleteOrderReq
                 .when().delete("/api/ecom/order/delete-order/{orderId}")
@@ -129,7 +123,6 @@ public class EcommerceApiTest {
         DeleteResponse deleteOrderBojoResponse = deleteOrderBaseResp.as(DeleteResponse.class);
         String orderMessage = deleteOrderBojoResponse.getMessage();
         System.out.println(orderMessage);
-
 
         //Delete Product
         RequestSpecification deleteProductBaseReq = new RequestSpecBuilder()

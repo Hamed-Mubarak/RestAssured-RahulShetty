@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cffdb6d-a681-48b3-a316-5f5f650445a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/deSerialization/DeserializeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/deSerialization/GetPlaceBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pojo/deSerialization/LocationResp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/serialization/AddPlaceBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/serialization/AddPlaceBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/serialization/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/serialization/LocationReq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pojo/serialization/SerializeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pojo/serialization/SerializeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/reqSpecBuilder/ReqSpecBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/reqSpecBuilder/ReqSpecBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/E2E_ecommerceAPI/CreateOrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/E2E_ecommerceAPI/CreateOrderResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/E2E_ecommerceAPI/EcommerceApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/E2E_ecommerceAPI/EcommerceApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/E2E_ecommerceAPI/OrderDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/E2E_ecommerceAPI/OrderDetails.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +45,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.runner&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.DeserializeTest.testDeserialization">
+  <component name="RunManager" selected="TestNG.EcommerceApiTest.ecommerceE2ETest">
     <configuration name="DeserializeTest.testDeserialization" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="RestAssured_Java" />
       <extension name="coverage">
@@ -149,10 +145,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.EcommerceApiTest.ecommerceE2ETest" />
         <item itemvalue="TestNG.DeserializeTest.testDeserialization" />
         <item itemvalue="TestNG.SerializeTest.serializationTest" />
         <item itemvalue="TestNG.ReqSpecBuilder.requestSpecBuilder" />
-        <item itemvalue="TestNG.EcommerceApiTest.ecommerceE2ETest" />
         <item itemvalue="TestNG.EcommerceApiTest.ecommerceE2ETest (1)" />
       </list>
     </recent_temporary>
