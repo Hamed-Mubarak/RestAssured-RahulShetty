@@ -1,9 +1,7 @@
 package reqSpecBuilder;
 
 import files.ReusableMethods;
-import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.builder.ResponseBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -12,7 +10,7 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.testng.annotations.Test;
 import pojo.serialization.AddPlaceBody;
-import pojo.serialization.Location;
+import pojo.serialization.LocationReq;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +36,7 @@ public class ReqSpecBuilder {
         myTypesList.add("shop");
         a.setTypes(myTypesList);
         // as we expect Location class, so we have to take an object from location class first and pass it
-        Location l = new Location();
+        LocationReq l = new LocationReq();
         l.setLat(29.9891544);
         l.setLng(31.3063091);
         a.setLocation(l);

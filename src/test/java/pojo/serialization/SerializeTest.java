@@ -2,14 +2,11 @@ package pojo.serialization;
 
 import files.ReusableMethods;
 import io.restassured.RestAssured;
-import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import static  io.restassured.RestAssured.*;
 
 public class SerializeTest {
@@ -30,13 +27,13 @@ public class SerializeTest {
         myTypesList.add("shop");
         a.setTypes(myTypesList);
         // as we expect Location class, so we have to take an object from location class first and pass it
-        Location l = new Location();
+        LocationReq l = new LocationReq();
         l.setLat(29.9891544);
         l.setLng(31.3063091);
         a.setLocation(l);
 
         RestAssured.baseURI = "https://rahulshettyacademy.com";
-        Response resp = given().queryParam("key","qaclick123")
+        Response resp = given().log().all().queryParam("key","qaclick123")
                 .body(a)
         .when().post("maps/api/place/add/json")
         .then().assertThat().statusCode(200).extract().response();
