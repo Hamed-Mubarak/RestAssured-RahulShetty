@@ -76,7 +76,7 @@ public class oAuthTest {
         .when().log().all().get("https://rahulshettyacademy.com/getCourse.php").asString();
         System.out.println(response);
  /*
-        When the API is passed i have to tell the IDE that the default response received is JSON
+        When x the API is passed i have to tell the IDE that the default response received is JSON
         and convert it to Java Object POJO class
         GetCourse getCourse=
         given().queryParam("access_token",accessToken).expect().defaultParser(Parser.JSON)
